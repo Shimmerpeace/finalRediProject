@@ -1,5 +1,5 @@
 import React from "react";
-import { useCart } from "../CartContext";
+import { useCart } from "../contextProvider/CartContext";
 import { AiOutlineDelete } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 

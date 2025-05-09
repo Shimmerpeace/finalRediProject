@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { AiFillStar } from "react-icons/ai";
 import { useParams } from "react-router-dom";
-import { useCart } from "../CartContext";
-import Spinner from "../Spinner";
+import { useCart } from "../contextProvider/CartContext"; 
+import Spinner from "../components/Spinner";
 
 export default function ProductDetail() {
   const { id } = useParams();

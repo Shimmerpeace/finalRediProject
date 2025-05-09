@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import ProductList from "./pages/product/ProductList";
+import ProductList from "./components/ProductList";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import ProductDetail from "./pages/ProductDetails";
 import Cart from "./pages/Cart";
-import Spinner from "./Spinner";
+import Spinner from "./components/Spinner"
 import Header from "./components/Header";
 import Footer from "./components/footer";
 
-export default function Main() {
+export default function Layout() {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);

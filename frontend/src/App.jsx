@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import { CartProvider } from "./CartContext";
-import Main from "./main";
+import { CartProvider } from "./contextProvider/CartContext";
 import "./App.css";
+import Layout from "./Layout";
 
 export default function App() {
   return (
     <CartProvider>
       <BrowserRouter>
-        <Main />
+        <Layout />
       </BrowserRouter>
     </CartProvider>
   );

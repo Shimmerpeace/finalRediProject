@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AiFillStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { useCart } from "../../CartContext";
+import { useCart } from "../contextProvider/CartContext";
 
 export default function ProductCard({ product }) {
   const { dispatch, cart } = useCart();
@@ -13,7 +13,6 @@ export default function ProductCard({ product }) {
     setShowAlert(true);
     setTimeout(() => setShowAlert(false), 2000); // Hide alert after 2 seconds
   };
-  
 
   return (
     <div className="product-card">
@@ -28,9 +27,7 @@ export default function ProductCard({ product }) {
         {product.rating.rate} ({product.rating.count})
       </p>
 
-      <button onClick={handleAddToCart}>
-        Add to 🛒
-      </button>
+      <button onClick={handleAddToCart}>Add to 🛒</button>
 
       {inCart && (
         <button onClick={() => dispatch({ type: "REMOVE", id: product.id })}>
@@ -39,15 +36,10 @@ export default function ProductCard({ product }) {
       )}
 
       {/* Alert UI */}
-      {showAlert && (
-        <div className="alert">
-          Product added to cart!
-        </div>
-      )}
+      {showAlert && <div className="alert">Product added to cart!</div>}
     </div>
   );
 }
-
 
 /*
 import React from "react";

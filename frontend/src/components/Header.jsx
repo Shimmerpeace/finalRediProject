@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useCart } from "../CartContext";
+import { useCart } from "../contextProvider/CartContext";
 import { TiShoppingCart } from "react-icons/ti";
 
 export default function Header({ onSearch }) {
